@@ -3,7 +3,7 @@
     
 ## MFCC
 <p align="center">  
-  <img src="https://user-images.githubusercontent.com/19161231/47408767-984ebd80-d79b-11e8-9665-f6d895348234.png" width="60%">
+  <img src="MFCC.jpg" width="60%">
 </p>
 <p align="center">< 그림 3 : MFCC ></p>   
 `MFCC`는 Mel Frequency Cepstrum Coefficient의 약자로서 음성인식 분야에서 널리 사용되는 알고리즘이다.   
