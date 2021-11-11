@@ -5,11 +5,23 @@
 <p align="center">  
   <img src="MFCC_1.jpg" width="70%">
 </p>
-<p align="center">< 그림 1 : MFCC ></p>   
+<p align="center">< 그림 1 : MFCC ></p>
+### STFT
+  <p>
+ STFT는 시간, 주파수와 음량 간의 상관관계를 손실하지 않고 특징을 추출 해내기 위해서 시간 구간별로 Fourier Transform 연산을 수행하는 알고리즘이다.
+ 본 논문에서 적용한 수치는 샘플링 레이트, Hop Length, n_mels, n_fft이고 샘플링 레이트는 이산적 신호를 얻기 위한 단위 시간당 샘플링 횟수를 뜻하고, Hop Length는 음성의 magnitude를 얼마나 겹처서 잘라서 보여주는 지를 뜻하고, n_mels는 주파수를 나눠주는 수이고, n_fft는 음성 프레임의 길이를 결정하는 것이다. 각 수치는 16,000, 256, 40, 512이다.
+ </p>
+ <p align="center">
+  <img src="STFT.jpg" width="60%">
+ </p>
+ <p align="center">< 그림 3 : STFT  ></p> 
+### MFCC
+ <p>
  `MFCC`는 Mel Frequency Cepstrum Coefficient의 약자로서 음성인식 분야에서 널리 사용되는 알고리즘이다.   
 MFCC는 소리의 특징을 추출하는 알고리즘으로서 입력받은 소리를 일반적으로 20ms-40ms정도의 작은 프레임으로 쪼개는 과정을 거치고 이러한 프레임들의 스펙트럼을 분석하여 특징을 추출하는 기법이다.   
 MFCC를 이용한 Features 추출은 음정이 변해도 어느 정도 일정하다는 장점이 있기 때문에 음성인식에 효과적인 알고리즘이다.    
-아래의 그림은 MFCC의 전체적인  과정이다.   
+아래의 그림은 MFCC의 전체적인  과정이다.
+  </p>
 <p align="center">  
   <img src="MFCC.jpg" width="60%">
 </p>
@@ -17,19 +29,13 @@ MFCC를 이용한 Features 추출은 음정이 변해도 어느 정도 일정하
  사람마다 개개인의 고유한 DNA 및 지문을 가지고 있듯이, 각 사람마다 목소리의 고유 주파수, 진폭 등이 다르다는 특성(MFCC)을 이용하여 개인의 신분을 확인 할 수 있는 화자 인식이 가능하다.   
 본 프로젝트에서는 음성 전처리 과정을 MFCC를 사용해서 진행하였다.
  </p>
- <p>
- STFT는 시간, 주파수와 음량 간의 상관관계를 손실하지 않고 특징을 추출 해내기 위해서 시간 구간별로 Fourier Transform 연산을 수행하는 알고리즘이다.
- 본 논문에서 적용한 수치는 샘플링 레이트, Hop Length, n_mels, n_fft이고 샘플링 레이트는 이산적 신호를 얻기 위한 단위 시간당 샘플링 횟수를 뜻하고, Hop Length는 음성의 magnitude를 얼마나 겹처서 잘라서 보여주는 지를 뜻하고, n_mels는 주파수를 나눠주는 수이고, n_fft는 음성 프레임의 길이를 결정하는 것이다. 각 수치는 16,000, 256, 40, 512이다.
- </p>
- <p align="center">
-  <img src="STFT.jpg" width="60%">
- </p>
- <p align="center">< 그림 3 : STFT  ></p>  
-## Project Structure
+ 
+## CNN Model Structure
 <p align="center">
   <img src="Cnn_Model_Structure.jpg">
 </p>
-<p align="center">< 그림 4 : CNN Model Structure ></p>  
+<p align="center">< 그림 4 : CNN Model Structure ></p> 
+ 
 ## Data Collection
 <p>
   <table>
