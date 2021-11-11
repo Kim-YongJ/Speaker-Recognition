@@ -1,30 +1,6 @@
 # Speaker-Recognition(화자 인식)
-독립적인 인물들의 음성데이터를 사전에 학습하여 말하는 사람이 누구인지 파악 할 수 있다.   
-## 화자 인식의 종류
-### 화자 검증(Speaker Verification)
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/19161231/47408492-946e6b80-d79a-11e8-8ae1-8d118cbd65da.png">
-</p>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/19161231/47408073-d0083600-d798-11e8-8dc0-23bb62664bb4.png">
-</p>
-<p align="center">< 그림 1 : 화자 검증 개요도 > </p>   
-`화자 검증`은 저장한 화자의 음성과 입력 음성 사이의 유사도(Likelihood)를 이용하여 구한다.   
-즉, 저장되지 않은 목소리, 즉, 사칭 목소리와  ‘유사도 간 비율(Δ)’을 측정한다.   
-그리고 사칭자 대비 신뢰할 수 있는 비율에 해당하는 ‘기준값(Θ)’에 따라 화자 일치 여부를 검증하게 된다.   
-그러한 과정으로 시스템은 이를 통해 등록되지 않은 목소리를 구별할 수가 있게 된다.
-  
-### 화자 식별(Speaker Identification)
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/19161231/47408080-d3032680-d798-11e8-92ce-c3a28712fe18.png">
-</p>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/19161231/47408093-e0201580-d798-11e8-9fff-e671183c5c5a.png">
-</p>
-<p align="center">< 그림 2 : 화자 식별 개요도 ></p>   
-`화자식별`은 미리 N명의 화자 모델(Voiceprint)을 등록한 시스템을 이용하여 화자 식별을 한다(그림2).   
-특정 사람이 시스템에 음성을 입력하면, 등록된 화자 모델을 검색해 음성과 가장 일치하는 화자를 찾게 된다.   
-현재 프로젝트에서는 화자 식별을 이용한 화자인식을 Convolutional Neural Network를 이용하여 구현하였다.      
+사람의 음성의 특징을 추출하여 인식하는 화자 인식(Speaker Recognition) 기술은 특정 문장의 사용에서의 인식에 따라 문장 종속(Text dependent)방식과 문장 독립(Text Independent)방식으로 구분된다. 문장 종속방식은 한 사람 목소리의 고유한 개별 특성을 학습함으로써 작동하고, 화자 등록 과정과 검증 과정의 음성의 내용이 동일하기 때문에 높은 정확도를 얻을 수 있다. 반대로 문장 독립방식은 불특정 다수 화자의 음성을 인식하도록 개발되고, 검증 과정에서의 음성의 내용이 등록한 음성의 내용과 무관하기에 상대적으로 높은 정확도를 얻기 힘들다. 
+    
 ## MFCC
 <p align="center">  
   <img src="https://user-images.githubusercontent.com/19161231/47408767-984ebd80-d79b-11e8-9665-f6d895348234.png" width="60%">
